@@ -1,0 +1,21 @@
+using System;
+
+namespace ForAzeroth
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nickname = "Shinsek";
+            int level = 80;
+            string race = "Night Elf";
+            string gender = "Male";
+            string faction = "Alliance";
+            string classe = "Mage";
+            //i used "\n" to make the next text drop down one line, i used the "+" so the console can read my variables beetwen the text that i wrote.  
+            Console.WriteLine("Nickname: " + nickname + "\nLevel: " + level + "\nRace: " + race + "\nGender: " + gender + "\nFaction: " + faction + "\nClass: " + classe);
+
+            Console.WriteLine("\nMy char nick is " + nickname + " and I'm a level " + level + " warrior." + "\nMy character is a " + gender + " " + race + " fighting for the " + faction + " faction.");
+        }
+    }
+}
