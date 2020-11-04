@@ -1,0 +1,21 @@
+using System;
+
+namespace Frostmourne
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "Daisy Chain";
+            string rarity = "Legendary";
+            string description = "Daisy Chain is a two-handed sword that had the highest melee DPS and was the rarest drop.";
+            string tClass = "Warrior";
+            string thWeapon = "Two-Handed Weapon";
+
+            int minDmg = 242;
+            int maxDmg = 364;
+
+            Console.WriteLine("Name: " + name + "\nRarity: " + rarity + "\nDamage: " + minDmg + " - " + maxDmg + "\nDescription: " + description + "\nTarget Class: " + tClass + "\nType: " + thWeapon);
+        }
+    }
+}
