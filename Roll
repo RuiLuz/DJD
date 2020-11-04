@@ -1,0 +1,29 @@
+using System;
+
+namespace Roll
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int p1 = r.Next(1, 6);
+            int p2 = r.Next(1, 6);
+
+            if (p1 > p2)
+            {
+                Console.WriteLine("Player 1 rolled " + p1 + " and Player 2 rolled " + p2 + "." + "\nPlayer 1 got the item!");
+            }
+            else
+            {
+                Console.WriteLine("Player 1 rolled " + p1 + " and Player 2 rolled " + p2 + "." + "\nPlayer 2 got the item!");
+            }
+
+            if (p1 == p2)
+            {
+                Console.WriteLine("Player 1 rolled " + p1 + " and Player 2 rolled " + p2 + "." + "\nRoll ended in a Draw. Please reroll!");
+            }
+        }
+    }
+}
