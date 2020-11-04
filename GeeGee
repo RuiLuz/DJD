@@ -1,0 +1,15 @@
+using System;
+
+namespace GeeGee
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int player = 100;
+            int OneShot = player;
+            player -= OneShot;
+            Console.WriteLine("gg \nYou have " + player + " health points");
+        }
+    }
+}
