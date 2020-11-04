@@ -1,0 +1,12 @@
+using System;
+
+namespace LetTheGamesBegin
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Game Started!\nGame Playing!\nGame Over!");
+        }
+    }
+}
