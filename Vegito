@@ -1,0 +1,26 @@
+using System;
+
+namespace Vegito
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            float Atk1 = r.Next(25, 101);
+            float Def1 = r.Next(25, 101);
+            float Int1 = r.Next(25, 101);
+
+            float Atk2 = r.Next(25, 101);
+            float Def2 = r.Next(25, 101);
+            float Int2 = r.Next(25, 101);
+
+            float avgAtk = (Atk1 + Atk2) / 2;
+            float avgDef = (Def1 + Def2) / 2;
+            float avgInt = (Int1 + Int2) / 2;
+
+            Console.WriteLine("Goku:" + "\nAtk: " + Atk1 + "\nDef: " + Def1 + "\nInt: " + Int1 + "\n " + "\nVegeta:" + "\nAtk: " + Atk2 + "\nDef: " + Def2 + "\nInt: " + Int2 + "\n" + "\nVegito Stats:" + "\nAtk: " + avgAtk + "\nDef: " + avgDef + "\nInt: " + avgInt);
+        }
+    }
+}
