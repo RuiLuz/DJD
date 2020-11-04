@@ -1,0 +1,33 @@
+using System;
+
+namespace Media_maior_15
+
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int n = r.Next(1, 31);
+            int[] alunos = new int[n];
+            int Nota = 0;
+
+
+            for(int i = 0; i < n; i++)
+            {
+                alunos[i] = r.Next(21);
+
+                if(alunos[i] >= 15)
+                {
+                    Console.WriteLine(alunos[i]);
+                }
+
+                if(Nota <= alunos[i])
+                {
+                    Nota = alunos[i];
+                }
+            }
+            Console.WriteLine("A nota mais alta foi: " + Nota);
+        }
+    }
+}
