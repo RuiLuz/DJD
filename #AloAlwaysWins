@@ -1,0 +1,49 @@
+using System;
+
+namespace alialwayswins
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int hpPTwo = 100;
+            int hpPOne = hpPTwo; //vidas p1 e p2
+
+            //player 1 attacks
+            int pOneAttackA = r.Next(1, 10);
+            int pOneAttackB = r.Next(1, 10);
+
+
+            //player 2 attacks
+            int pTwoAttackA = r.Next(1, 10);
+            int pTwoAttackB = r.Next(1, 10);
+
+            bool ko = false;
+            int countTurns = 0;
+
+            while (!ko)
+            {
+                countTurns++;
+                int decisionPOne=r.Next(0, 3); // 0 - attack A, 1 - attack B, 2 - block
+                int decisionPTwo = r.Next(0, 3); // 0 - attack A, 1 - attack B, 2 - block
+                if(decisionPOne!=2 && decisionPTwo != 2) // os dois decidiram atacar
+                {
+                    decisionPOne = decisionPOne == 0 ? pOneAttackA : pOneAttackB;
+                    decisionPTwo = decisionPTwo == 0 ? pTwoAttackA : pTwoAttackB;
+                    hpPOne -= decisionPTwo;
+                    hpPTwo -= decisionPOne;
+                    
+                    
+                }
+
+
+
+
+                if (hpPOne <= 0 || hpPTwo <= 0) ko = true; // caso um dos jogadores tenha vida inferior ou igual a zero o combate termina
+            }
+            string vencedor = hpPOne > hpPTwo ? "Rui" : "Ana";
+            Console.WriteLine($"O vencedor foi {vencedor} em {countTurns} turnos");
+        }
+    }
+}
