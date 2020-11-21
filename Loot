@@ -1,0 +1,39 @@
+using System;
+
+namespace Loot
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int randomItemOne = r.Next(101);
+            int randomItemTwo = r.Next(101);
+
+            if (randomItemOne <= 60)
+            {
+                Console.WriteLine("First Item - Common " + randomItemOne + " - Bad Luck Bruh");
+            }
+            else if (randomItemOne > 60 && randomItemOne < 90)
+            {
+                Console.WriteLine("First Item - Uncommon " + randomItemOne + " - Unlucky");
+            }
+            else if (randomItemOne >= 90)
+            {
+                Console.WriteLine("First Item - Rare " + randomItemOne + " - Excellent");
+            }
+            if (randomItemTwo <= 60)
+            {
+                Console.WriteLine("Second Item - Common " + randomItemTwo + " - Bad Luck Bruh");
+            }
+            else if (randomItemTwo > 60 && randomItemTwo < 90)
+            {
+                Console.WriteLine("Second Item - Uncommon " + randomItemTwo + " - Unlucky");
+            }
+            else if (randomItemTwo >= 90)
+            {
+                Console.WriteLine("Second Item - Rare " + randomItemTwo + " - Excellent");
+            }
+        }
+    }
+}
