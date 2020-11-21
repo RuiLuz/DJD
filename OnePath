@@ -1,0 +1,51 @@
+using System;
+
+namespace OnePath
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int posX = 0, posY = 0;
+
+            Console.WriteLine(posX + " " + posY);
+            for (int i = 0; i < 3; i++)
+            {
+
+                int n_posX = r.Next(501);
+                int n_posY = r.Next(501);
+                if (posX < n_posX)
+                {
+                    for (int l = posX; l < n_posX; l++)
+                    {
+                        posX++;
+                    }
+                }
+                else if (posX > n_posX)
+                {
+                    for (int l = posX; l > n_posX; l--)
+                    {
+                        posX--;
+                    }
+                }
+
+                if (posY < n_posY)
+                {
+                    for (int l = posY; l < n_posY; l++)
+                    {
+                        posY++;
+                    }
+                }
+                else if (posY > n_posY)
+                {
+                    for (int l = posY; l > n_posY; l--)
+                    {
+                        posY--;
+                    }
+                }
+                Console.WriteLine(posX + " " + posY);
+            }
+        }
+    }
+}
