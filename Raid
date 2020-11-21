@@ -1,0 +1,34 @@
+using System;
+
+namespace Raid
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String[] classes = { "Warrior", "Mage", "Striker", "Sorceress", "Ranger", "Musa" };
+            String[] users = new string[20];
+            int counter;
+
+            Random r = new Random();
+
+            for (int i = 0; i < users.Length; i++)
+            {
+                users[i] = classes[r.Next(6)];
+            }
+
+            for (int i = 0; i < classes.Length; i++)
+            {
+                counter = 0;
+                for (int j = 0; j < users.Length; j++)
+                {
+                    if (users[j] == classes[i])
+                    {
+                        counter++;
+                    }
+                }
+                Console.WriteLine("There are " + counter + " " + classes[i] + "s.\n");
+            }
+        }
+    }
+}
