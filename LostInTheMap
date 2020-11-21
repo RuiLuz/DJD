@@ -1,0 +1,40 @@
+using System;
+using System.Runtime.InteropServices.ComTypes;
+
+namespace _11_LostinTheMap
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int posX,posY;
+
+            posX = r.Next(1,501);
+            posY = r.Next(1,501);
+
+            if(posX > 250)
+            {
+                if(posY > 250)
+                {
+                    Console.WriteLine("O jogador está à esquerda na parte de cima");
+                }
+                else
+                {
+                    Console.WriteLine("O jogador está à esquerda na parte de baixo");
+                }
+            }
+            else
+            {
+                if (posY > 250)
+                {
+                    Console.WriteLine("O jogador está à direita na parte de cima");
+                }
+                else
+                {
+                    Console.WriteLine("O jogador está à direita na parte de baixo");
+                }
+            }
+        }
+    }
+}
