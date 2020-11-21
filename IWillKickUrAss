@@ -1,0 +1,35 @@
+using System;
+
+namespace IWillKickUrAss
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int ch1HP = r.Next(100, 200);
+            int ch1ATK = r.Next(10, 50);
+
+            int ch2HP = r.Next(100, 200);
+            int ch2ATK = r.Next(10, 50);
+
+            int ch1Trn = ch1HP / ch2ATK;
+            int ch2Trn = ch2HP / ch1ATK;
+
+            if (ch1Trn > ch2Trn)
+            {
+                Console.WriteLine("Character 1 stats:" + "\nHP: " + ch1HP + "\nATK: " + ch1ATK + "\n" + "\nCharacter 2 stats:" + "\nHP: " + ch2HP + "\nATK: " + ch2ATK + "\n" + "\nCharacter 1 will win the fight!");
+            }
+            else
+            {
+                Console.WriteLine("Character 1 stats:" + "\nHP: " + ch1HP + "\nATK: " + ch1ATK + "\n" + "\nCharacter 2 stats:" + "\nHP: " + ch2HP + "\nATK: " + ch2ATK + "\n" + "\nCharacter 2 will win the fight!");
+            }
+
+            if (ch1Trn == ch2Trn)
+            {
+                Console.WriteLine("Character 1 stats:" + "\nHP: " + ch1HP + "\nATK: " + ch1ATK + "\n" + "\nCharacter 2 stats:" + "\nHP: " + ch2HP + "\nATK: " + ch2ATK + "\n" + "\nThe battle will end in a draw!");
+            }
+        }
+    }
+}
