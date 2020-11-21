@@ -1,0 +1,26 @@
+using System;
+
+namespace ShakeItBaby
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int n = r.Next(1, 5);
+            for (int i = 0; i < n; i++)
+            {
+                for (int l = 0; l < 10; l++)
+                {
+                    Console.WriteLine("Shoot");
+
+                }
+                if (i < n - 1)
+                {
+                    Console.WriteLine("Reload");
+                    System.Threading.Thread.Sleep(2000);
+                }
+            }
+        }
+    }
+}
