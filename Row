@@ -1,0 +1,20 @@
+using System;
+
+namespace Row
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            for (int i = 0; i < 20; i++)
+            {
+                int p = r.Next(21);
+                if (p % 2 == 0)
+                {
+                    Console.WriteLine("O jogador " + i + " tem um nivel par de " + p);
+                }
+            }
+        }
+    }
+}
