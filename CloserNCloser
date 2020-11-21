@@ -1,0 +1,107 @@
+using System;
+
+namespace CloserNCloser
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int p1X = r.Next(0, 500);
+            int p1Y = r.Next(0, 500);
+
+            int p2X = r.Next(0, 500);
+            int p2Y = r.Next(0, 500);
+
+            int p3X = r.Next(0, 500);
+            int p3Y = r.Next(0, 500);
+
+            int distP1P2X;
+            int distP1P2Y;
+
+            int distP1P3X;
+            int distP1P3Y;
+
+            int distP2P3X;
+            int distP2P3Y;
+
+            if (p1X > p2X)
+            {
+                distP1P2X = p1X - p2X;
+            }
+            else
+            {
+                distP1P2X = p2X - p1X;
+            }
+
+            if (p1Y > p2Y)
+            {
+                distP1P2Y = p1Y - p2Y;
+            }
+            else
+            {
+                distP1P2Y = p2Y - p1Y;
+            }
+
+            if (p1X > p3X)
+            {
+                distP1P3X = p1X - p3X;
+            }
+            else
+            {
+                distP1P3X = p3X - p1X;
+            }
+
+            if (p1Y > p3Y)
+            {
+                distP1P3Y = p1Y - p3Y;
+            }
+            else
+            {
+                distP1P3Y = p3Y - p1Y;
+            }
+
+            if (p2X > p3X)
+            {
+                distP2P3X = p2X - p3X;
+            }
+            else
+            {
+                distP2P3X = p3X - p2X;
+            }
+
+            if (p2Y > p3Y)
+            {
+                distP2P3Y = p2Y - p3Y;
+            }
+            else
+            {
+                distP2P3Y = p3Y - p2Y;
+            }
+
+            double rDP1P2 = Math.Sqrt((distP1P2X ^ 2) + (distP1P2Y ^ 2));
+
+            double rDP1P3 = Math.Sqrt((distP1P3X ^ 2) + (distP1P3Y ^ 2));
+
+            double rDP2P3 = Math.Sqrt((distP2P3X ^ 2) + (distP2P3Y ^ 2));
+
+            if (rDP1P2 > rDP1P3 && rDP1P2 > rDP2P3)
+            {
+                Console.WriteLine("Player 1 and Player 2 are the closest players in the map!");
+            }
+
+            if (rDP1P3 > rDP1P2 && rDP1P3 > rDP2P3)
+            {
+                Console.WriteLine("Player 1 and Player 3 are the closest players in the map!");
+            }
+
+            if (rDP2P3 > rDP1P2 && rDP2P3 > rDP1P3)
+            {
+                Console.WriteLine("Player 2 and Player 3 are the closest players in the map!");
+            }
+
+            Console.WriteLine(rDP1P2 + "\n" + rDP1P3 + "\n" + rDP2P3);
+        }
+    }
+}
