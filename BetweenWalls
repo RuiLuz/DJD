@@ -1,0 +1,21 @@
+using System;
+
+namespace BetweenWalls
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int n_min = r.Next(1, 100);
+            int n_max = r.Next(n_min, 100);
+            Console.WriteLine("min " + n_min);
+            Console.WriteLine("max " + n_max);
+
+            for (int i = n_min + 1; i < n_max; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
