@@ -1,0 +1,30 @@
+using System;
+
+namespace arrays_exemplo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] valores = null;
+            //Console.WriteLine("1st"+valores[0]);
+            valores = new int[100];
+            Random r = new Random();
+            //ciclo para atribuir valores
+            for(int i = 0;i<valores.Length; i++)
+            {
+                valores[i] = r.Next(50);
+            }
+
+            //ciclo para imprimir
+            for (int i = 0; i < valores.Length; i++)
+            {
+                
+                Console.WriteLine(valores[i]);
+            }
+
+
+
+        }
+    }
+}
