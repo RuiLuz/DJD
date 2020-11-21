@@ -1,0 +1,31 @@
+using System;
+public class PrimeNumberExample
+{
+    public static void Main(string[] args)
+    {
+        Random r = new Random();
+
+        int n = r.Next(1, 51);
+        Console.WriteLine("Quantidade de numeros " + n);
+
+        int primo = 0;
+        int quantidade = 0;
+
+        for(int i = 0; i < n; i++)
+        {
+            primo = 0;
+            int p = r.Next(1, 100);
+
+        for(int j = 1; j <= p; j++)
+            {
+                if (p % j == 0) primo++;
+            }
+        if(primo == 2)
+            {
+                Console.WriteLine("Nº Primo: " + p);
+                quantidade++;
+            }
+        }
+        Console.WriteLine("Quantidade de números primos: " + quantidade);
+    }
+}
