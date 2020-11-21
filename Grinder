@@ -1,0 +1,25 @@
+using System;
+
+namespace Grinder
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int bank = r.Next(1000, 100000);
+            int gDropped = r.Next(35, 65);
+            int mKilled = bank / gDropped;
+
+            if (mKilled >= 1000) 
+            {
+                Console.WriteLine("NEW ACHIEVEMENT UNLOCKED: " + "\n" + "GRINDER" + "\n" + mKilled + " monsters killed!");
+            }
+            else
+            {
+                Console.WriteLine(mKilled + " creatures killed!");
+            }
+        }
+    }
+}
