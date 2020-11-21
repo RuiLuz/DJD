@@ -1,0 +1,64 @@
+using System;
+
+namespace Fill_In
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] a = null;
+            int[] b = null;
+            int[] c = null;
+            int[] d = null;
+
+            a = new int[10];
+            b = new int[50];
+            c = new int[11];
+            d = new int[11];
+            d[0] = 0;
+            d[1] = 1;
+
+            Console.WriteLine("a:");
+            for (int i = 0; i <= a.Length - 1; i++)
+            {
+                a[i] = 10 - i;
+                Console.WriteLine(a[i]);
+            }
+
+            Console.WriteLine("\nb:");
+            for (int i = 0; i < b.Length - 45; i++)
+            {
+                b[i] = i + 1;
+
+                Console.WriteLine(b[i]);
+
+                if (b[i] >= 5)
+                {
+                    for (int j = 1; j <= 5; j++)
+                    {
+                        b[j] = 10 * j;
+                        Console.WriteLine(b[j]);
+                    }
+                }
+            }
+
+            Console.WriteLine("\nc:");
+            for (int i = 0; i <= c.Length - 1; i++)
+            {
+                c[i] = i * i;
+                Console.WriteLine(c[i]);
+            }
+
+            Console.WriteLine("\nd:");
+            for (int i = 2; i < d.Length; i++)
+            {
+                d[i] = d[i - 1] + d[i - 2];
+            }
+
+            for (int i = 0; i < d.Length; i++)
+            {
+                Console.WriteLine(d[i]);
+            }
+        }
+    }
+}
