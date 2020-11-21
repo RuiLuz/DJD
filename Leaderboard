@@ -1,0 +1,46 @@
+using System;
+
+namespace Leaderboard
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int P1 = r.Next(500);
+            int P2 = r.Next(500);
+            int P3 = r.Next(500);
+
+            if (P1 > P2 && P2 > P3)
+            {
+                Console.WriteLine("Leaderboard:" + "\nPlayer 1: " + P1 + " pts." + "\nPlayer 2: " + P2 + " pts." + "\nPlayer 3: " + P3 + " pts.");
+            }
+
+            if (P1 > P3 && P3 > P2)
+            {
+                Console.WriteLine("Leaderboard:" + "\nPlayer 1: " + P1 + " pts." + "\nPlayer 3: " + P3 + " pts." + "\nPlayer 3: " + P2 + " pts.");
+            }
+
+            if (P2 > P1 && P1 > P3)
+            {
+                Console.WriteLine("Leaderboard:" + "\nPlayer 2: " + P2 + " pts." + "\nPlayer 1: " + P1 + " pts." + "\nPlayer 3: " + P3 + " pts.");
+            }
+
+            if (P3 > P2 && P2 > P1)
+            {
+                Console.WriteLine("Leaderboard:" + "\nPlayer 3: " + P3 + " pts." + "\nPlayer 2: " + P2 + " pts." + "\nPlayer 1: " + P1 + " pts.");
+            }
+
+            if (P3 > P1 && P1 > P2)
+            {
+                Console.WriteLine("Leaderboard:" + "\nPlayer 3: " + P3 + " pts." + "\nPlayer 1: " + P1 + " pts." + "\nPlayer 2: " + P2 + " pts.");
+            }
+
+            if (P2 > P3 && P3 > P1)
+            {
+                Console.WriteLine("Leaderboard:" + "\nPlayer 2: " + P2 + " pts." + "\nPlayer 3: " + P3 + " pts." + "\nPlayer 1: " + P1 + " pts.");
+            }
+        }
+    }
+}
