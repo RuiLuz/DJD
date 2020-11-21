@@ -1,0 +1,32 @@
+using System;
+
+namespace FightOrFlight
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+
+            int p1X = r.Next(500);
+            int p1Y = r.Next(500);
+
+            int p2X = r.Next(500);
+            int p2Y = r.Next(500);
+
+            int distanceX = p1X - p2X;
+            int distanceY = p1Y - p2Y;
+
+            double realDistance = Math.Sqrt(distanceX ^ 2 + distanceY ^ 2);
+
+            if (realDistance <= 20)
+            {
+                Console.WriteLine("Player 2 flight away because he was " + realDistance + " away of Player 1");
+            }
+            else
+            {
+                Console.WriteLine("Player 1 is at " + p1X + "x" + p1Y + "\nPlayer 2 is at " + p2X + "x" + p2Y);
+            }
+        }
+    }
+}
